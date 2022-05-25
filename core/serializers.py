@@ -9,7 +9,7 @@ class PostSerializer(TaggitSerializer, serializers.ModelSerializer):
 	
 	class Meta():
 		model = Post
-		fields = ("id", "h1", "title", "description", "content", "image", "cretaed_at", "author", "tags") #for all fields -> fields = '__all__'
+		fields = ("id", "h1", "title", "description", "content", "image", "created_at", "author", "tags") #for all fields -> fields = '__all__'
 		lookup_field = "slug"
 		extra_kwargs = {"url": {"lookup_field": "slug"}
 		}
