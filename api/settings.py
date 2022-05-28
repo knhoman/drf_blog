@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'corsheaders',
     'core',
     'ckeditor',
     'ckeditor_uploader',
@@ -189,3 +190,7 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'knhoman@gmail.com'
 EMAIL_HOST_PASSWORD = 'mkruryjxrcqkxkjt'
+
+
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_CREDENTIALS = True
