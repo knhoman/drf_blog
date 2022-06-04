@@ -20,15 +20,14 @@ class PageNumberSetPagination(pagination.PageNumberPagination):
     	ordering = "created_at"
 
 class PostViewSet(viewsets.ModelViewSet):
-	search_fields = ['content', 'h1']
-	filter_backend = (filters.SearchFilter, )
-	serializer_class = PostSerializer
-	queryset = Post.objects.all()
-	lookup_field = "slug"
-	permission_classes = [permissions.AllowAny,]
-	pagination_class = PageNumberSetPagination
-	
-	
+    	search_fields = ['content', 'h1']
+    	filter_backends = (filters.SearchFilter,)
+    	serializer_class = PostSerializer
+    	queryset = Post.objects.all()
+    	lookup_field = "slug"
+    	permission_classes = [permissions.AllowAny,]
+    	pagination_class = PageNumberSetPagination
+    	
 class TagDetailView(generics.ListAPIView):
 	serializer_class = PostSerializer
 	pagination_class = PageNumberSetPagination

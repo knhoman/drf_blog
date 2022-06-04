@@ -73,7 +73,7 @@ REST_FRAMEWORK = {
 	"DEFAULT_RENDERER_CLASSES": ["rest_framework.renderers.JSONRenderer"],
 	"TEST_REQUEST_DEFAULT_FORMAT": "json",
 	"DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.DjangoModelPermissions",),
-	"SEARCH_PARAM": "q", # set the worl in the url for query, default = "search"
+	"SEARCH_PARAM": "q", # set the word in the url for query, default = "search"
 }
 
 ROOT_URLCONF = 'api.urls'
